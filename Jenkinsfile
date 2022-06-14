@@ -28,12 +28,12 @@ pipeline {
             }
         }
     stage('Deploy') {
-    steps {
-        script {
-            def pom = readMavenPom file: 'pom.xml'
-            sh "./deploy.sh ${pom.getArtifactId()} ${pom.getVersion()}"
+        steps {
+            script {
+                def pom = readMavenPom file: 'pom.xml'
+                sh "./deploy.sh ${pom.getArtifactId()} ${pom.getVersion()}"
+            }
         }
-    }
- 
-
+    } 
 }
+
