@@ -17,13 +17,13 @@ pipeline {
         }
         stage('Build') {
             steps {
-             echo 'Stage Build'
+            sh 'mvn compile'
             }
         }
 
     stage('Test') {
         steps {
-            echo 'Stage Test'
+            sh 'mvn verify'
             }
         }
 
