@@ -12,7 +12,7 @@ pipeline {
                 expression {params.CLEAN_BEFORE_BUILD}
             }
             steps {
-             echo 'Stage Clean'
+            sh 'mvn clean'
             }
         }
         stage('Build') {
